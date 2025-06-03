@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marwan Desho Portfolio</title>
+<style>
+
+  /* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #222;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #00d1b2;
+}
+
+/* Hero Section */
+.hero {
+  background: #333 url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_1280.jpg") center/cover no-repeat;
+  height: 400px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+/* Image Section */
+.image-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.styled-image {
+  border-radius: 15px;
+  filter: grayscale(60%);
+  width: 300px;
+}
+
+/* Table */
+.table-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 12px;
+}
+
+th {
+  background-color: #00d1b2;
+  color: white;
+}
+
+/* Two Columns */
+.columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.column {
+  width: 40%;
+  height: 200px;
+  background: #f4f4f4;
+  padding: 1rem;
+  color: #333;
+}
+
+/* Paragraph Hover */
+.hover-text p {
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.hover-text p:hover {
+  color: #00d1b2;
+}
+
+/* Overlay Fade */
+.overlay-container {
+  position: relative;
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.overlay-container img {
+  width: 100%;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+right:0px; 
+top:0px;
+  background-color: rgba(0, 209, 178, 0.8);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.overlay-container:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Video Section */
+.video-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video with Overlay */
+.video-overlay-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.video-overlay-container video {
+  width: 100%;
+  display: block;
+}
+
+.video-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+</style>
+
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#howto">How To</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Your go-to developer for clean, responsive design</p>
+    </div>
+  </section>
+
+  <!-- Centered Image with filter and round corners -->
+  <section class="image-section">
+    <h2>Working</h2>
+    <img src="https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg" alt="Portfolio example" class="styled-image">
+  </section>
+
+  <!-- Table -->
+  <section class="table-section" id="about">
+    <h2>Skills</h2>
+    <table>
+      <tr>
+        <th>Technology</th>
+        <th>Proficiency</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Advanced</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>Advanced</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Two-column Layout -->
+  <section class="columns">
+    <div class="column">
+      <h3>Frontend</h3>
+      <p>I build responsive, interactive UI with HTML and CSS.</p>
+    </div>
+    <div class="column">
+      <h3>Backend</h3>
+      <p>None yet.</p>
+    </div>
+  </section>
+
+  <!-- Paragraph Hover Effect -->
+  <section class="hover-text" id="howto">
+    <p>Hover over this paragraph to see the effect.</p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="overlay-section">
+    <div class="overlay-container">
+      <img src="https://cdn.pixabay.com/photo/2016/11/22/21/26/notebook-1850613_1280.jpg" alt="Overlay Example">
+      <div class="overlay-text">Image Overlay Text</div>
+    </div>
+  </section>
+
+  <!-- Autoplay Looping Video -->
+  <section class="video-section">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_tiny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Video with Text Overlay -->
+  <section class="video-overlay-section">
+    <div class="video-overlay-container">
+      <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2017/07/23/10822-226624975_tiny.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay-text">Creative Coding in Action</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
